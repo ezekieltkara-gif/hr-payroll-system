@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LedgerHR | Accountant HR Management</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="auth" class="auth-shell">
+    <div class="auth-card">
+      <div class="brand-mark">L</div>
+      <p class="eyebrow">ACCOUNTANT PORTAL</p>
+      <h1>LedgerHR</h1>
+      <p class="muted">Secure HR, attendance and payroll management in PGK.</p>
+      <form id="login-form">
+        <label>Accountant password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary full" type="submit">Sign in securely</button>
+        <p id="login-error" class="error"></p>
+      </form>
+      <div id="setup-note" class="setup-note hidden">First use: enter a strong password to create the Accountant login.</div>
+    </div>
+  </div>
+
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="logo"><span> L </span><div><strong>LedgerHR</strong><small>ACCOUNTANT ONLY</small></div></div>
+      <nav id="nav"><button data-view="dashboard" class="nav-item active">▦ <span>Dashboard</span></button><button data-view="employees" class="nav-item">♙ <span>Employees</span></button><button data-view="attendance" class="nav-item">◷ <span>Attendance</span></button><button data-view="leave" class="nav-item">▣ <span>Leave</span></button><button data-view="payroll" class="nav-item">₱ <span>Payroll</span></button><button data-view="notifications" class="nav-item">♢ <span>Notifications</span><b id="nav-badge" class="badge hidden">0</b></button></nav>
+      <div class="sidebar-bottom"><button id="backup-btn" class="side-action">⇩ Backup all data</button><label class="side-action file-action">⇧ Restore backup<input id="restore-file" type="file" accept="application/json"></label><button id="logout" class="side-action">↪ Sign out</button></div>
+    </aside>
+    <main class="main"><header class="topbar"><div><p class="eyebrow">ACCOUNTANT WORKSPACE</p><h2 id="page-title">Dashboard</h2></div><div class="user-chip"><span class="avatar">A</span><div><strong>Accountant</strong><small>Single secure login</small></div></div></header><div id="content"></div></main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
